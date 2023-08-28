@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+/* styles.css */
+body{
+  background-color: black;
+margin-left: 1rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.horizontal-slider {
   display: flex;
-  flex-direction: column;
+  overflow-x: auto; /* Use 'auto' for horizontal scrolling */
+  height: 10rem;
+  border-radius: 5px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  white-space: nowrap; /* Prevent items from wrapping */
 }
 
-.App-link {
-  color: #61dafb;
+.horizontal-slider::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.horizontal-slider::-webkit-scrollbar-thumb {
+  background-color: #0e0c0c17; /* Color of the thumb */
+  border-radius: 3px;
+}
+
+.horizontal-slider::-webkit-scrollbar-thumb:hover {
+  background-color: #dac017ae; /* Color of the thumb on hover */
+}
+
+.horizontal-slider::-webkit-scrollbar-track {
+  background-color: #0a0a0a; /* Color of the track */
+  border-radius: 3px;
+}
+
+.horizontal-slider::-webkit-scrollbar-track:hover {
+  background-color: black; /* Color of the track on hover */
+}
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+
+}
+
+.movie-card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 8rem;
+  margin-left: 2rem;
+  box-shadow: rgb(227, 230, 228) 0px 4px 12px;
+  transition: transform 0.3s;
+  display: inline-block;
+  border-radius: 1rem;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+.genre{
+  color: wheat;
+}
+.filtered-titles-list {
+
+  max-height: 200px; /* Set the desired max height */
+  overflow: auto;
+  width: auto;
+  position: absolute;
+  border: 1px solid #ccc; /* Add a border for better visualization */
+  padding: 10px; /* Add some padding */
+  background-color: rgb(23, 22, 22);
+  z-index: 2000;
+
+}
+.image-search{
+  width: 8rem;
+  height: 3.5rem;
+
+}
+.title-search{
+  font-weight: bolder;
+margin-left: 1rem;
+color: black;
+
+
+}
+.container-search{
+  background-color: rgb(8, 164, 175);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+}
+.filtered-titles-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.filtered-titles-list::-webkit-scrollbar-thumb {
+  background-color: #dac017ae; /* Color of the thumb */
+  border-radius: 3px;
+}
+
+.filtered-titles-list::-webkit-scrollbar-thumb:hover {
+  background-color: #dac017ae; /* Color of the thumb on hover */
+}
+
+.filtered-titles-list::-webkit-scrollbar-track {
+  background-color: black; /* Color of the track */
+  border-radius: 3px;
+}
+
+.filtered-titles-list::-webkit-scrollbar-track:hover {
+  background-color: black; /* Color of the track on hover */
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  border-color: 5px solid rgb(16, 247, 174) !important;
+  margin: 1rem;
+
+}
+.navbar-title{
+  color: red;
+  width: 50%;
+ font-weight: bolder;
+
+}
+.searchBar{
+  display: flex;
+  align-content: end;
+  align-items: end;
+  margin-left: 12rem;
+}
+.search-input{
+  width: 20rem;
+  height: 2rem;
+  color: black;
+  font-weight: bolder ;
+  font-size: larger;
+  background-color: cornsilk;
 }
